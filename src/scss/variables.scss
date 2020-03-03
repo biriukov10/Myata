@@ -1,29 +1,14 @@
-$success: #305c2d;
+$success: #2ecc71;
 $primary: #fff;
+$secondary-color: #34495e;
 
-.hs-container {
+.mt-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1142px;
   margin: 0 auto;
-
-  &--about {
-    padding: 0 2.5rem;
-  }
-
-  &--why {
-    padding: 0 40px;
-  }
-
-  &--services {
-    padding: 0 40px;
-  }
-
-  &--footer {
-    padding: 0 40px;
-  }
 }
 
-.hs-hidden {
+.mt-hidden {
   position: absolute;
   left: -9999999px;
   height: 1px;

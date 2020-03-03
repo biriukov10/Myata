@@ -223,7 +223,7 @@ a {
           position: absolute;
           content: url("../img/mint.png");
           top: 5px;
-          right: -24px;
+          right: -14px;
 
           @media screen and(max-width: 991px) {
             left: -17px;
@@ -257,6 +257,163 @@ a {
       &-collapse {
         margin-top: 30px;
       }
+    }
+  }
+}
+
+// start main
+.mt-main {
+  // section hero
+  .mt-hero {
+    padding: 31px 0;
+    background: {
+      image: url("../img/bgHero.png");
+      repeat: no-repeat;
+      size: cover;
+    }
+
+    &-sale {
+      z-index: 2;
+      top: 35px;
+      right: 30px;
+
+      &__title {
+        font-size: 2.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $secondary-color;
+
+        &--fontWeight {
+          font-weight: 300;
+          font-size: 1.8437rem;
+
+          @media screen and(max-width: 776px) {
+            font-size: 1.3rem;
+          }
+
+          @media screen and(max-width: 500px) {
+            font-size: 0.875rem;
+          }
+        }
+
+        @media screen and(max-width: 991px) {
+          font-size: 1.5rem;
+          text-align: right;
+        }
+
+        @media screen and(max-width: 500px) {
+          font-size: 1rem;
+        }
+      }
+
+      &__btn {
+        margin-top: 27px;
+        right: 0;
+        background-color: $secondary-color;
+        padding: 14px 45px;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(0.9);
+        }
+
+        @media screen and(max-width: 500px) {
+          font-size: 0.875rem;
+          padding: 10px 25px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &-group {
+      &__icon {
+        height: 24px;
+        width: 24px;
+        top: 15px;
+        left: 74px;
+      }
+
+      &__item {
+        background-color: #ecf0f1;
+        color: $secondary-color;
+        border: none;
+        padding: 20px 0 22px 30px;
+        transition: 0.3s;
+
+        &.first {
+          &::after {
+            content: "";
+            width: 0;
+            height: 0;
+          }
+
+          &::before {
+            width: 0;
+            height: 0;
+          }
+        }
+
+        &.last {
+          &::before {
+            top: 39px;
+
+            @media screen and(max-width: 991px) {
+              top: 29px;
+            }
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background-color: $success;
+          border-radius: 50%;
+          left: 10px;
+          top: 29px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 90%;
+          margin: 0 auto;
+          height: 1px;
+          background-color: $success;
+          left: 10px;
+          bottom: 0;
+        }
+
+        &:first-child {
+          color: #ecf0f1;
+          text-align: center;
+          background-color: $success;
+          font-size: 1.125rem;
+          font-weight: bold;
+        }
+
+        &:hover:not(:first-child) {
+          color: #ecf0f1;
+          background-color: $secondary-color;
+        }
+      }
+
+      @media screen and(max-width: 991px) {
+        margin-bottom: 50px;
+      }
+    }
+
+    // slider settings
+    .circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      opacity: 0;
     }
   }
 }

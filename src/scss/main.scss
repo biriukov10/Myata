@@ -31,7 +31,7 @@ a {
 // start header
 
 .mt-header {
-  padding: 18px 0 30px;
+  padding-top: 18px;
   border-top: 2px solid $success;
   overflow-x: hidden;
 
@@ -189,10 +189,12 @@ a {
       &-good {
         &__item {
           color: $success;
+          cursor: pointer;
         }
 
         &__value {
           font-weight: normal;
+          cursor: pointer;
           color: #405468;
         }
       }
@@ -200,6 +202,61 @@ a {
 
     @media screen and(max-width: 991px) {
       margin-top: 30px;
+    }
+  }
+
+  // start header navbar
+
+  &-navbar {
+    margin-top: 30px;
+    background-color: $secondary-color;
+    padding: 25px 0;
+    text-transform: uppercase;
+
+    &-menu {
+      width: 100%;
+      max-width: 1050px;
+      margin: 0 auto;
+
+      &__item {
+        &::after {
+          position: absolute;
+          content: url("../img/mint.png");
+          top: 5px;
+          right: -24px;
+
+          @media screen and(max-width: 991px) {
+            left: -17px;
+          }
+        }
+
+        &:last-child {
+          &::after {
+            content: "";
+
+            @media screen and(max-width: 991px) {
+              content: url("../img/mint.png");
+            }
+          }
+        }
+      }
+
+      &__link {
+        color: $primary !important;
+        font-size: 0.875rem;
+
+        &:hover {
+          color: $success !important;
+        }
+      }
+    }
+
+    @media screen and(max-width: 991px) {
+      padding: 30px 60px;
+
+      &-collapse {
+        margin-top: 30px;
+      }
     }
   }
 }

@@ -363,6 +363,12 @@ a {
           }
         }
 
+        .none {
+          @media screen and(max-width: 991px) {
+            display: none;
+          }
+        }
+
         &::before {
           content: "";
           position: absolute;
@@ -414,6 +420,34 @@ a {
     .carousel-control-prev,
     .carousel-control-next {
       opacity: 0;
+    }
+  }
+
+  // section advantages
+  .mt-advantages {
+    padding: 68px 0 73px;
+    background-color: #ecf0f1;
+
+    &__title {
+      font-size: 2.75rem;
+      color: $secondary-color;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &-card {
+      margin-top: 70px;
+
+      &__icon {
+        width: 100px;
+        height: 100px;
+      }
+
+      &__text {
+        margin-top: 26px;
+        font-size: 1.25rem;
+        color: $secondary-color;
+      }
     }
   }
 }

@@ -49,15 +49,45 @@ a {
         &__icon {
           height: 16px;
           width: 16px;
+          margin-right: 5px;
+
+          &--mail {
+            height: 12px;
+          }
         }
 
         &__link {
           color: $secondary-color;
           font-weight: bold;
+
+          &--footer {
+            color: $primary;
+            text-transform: lowercase;
+          }
         }
 
         &__light {
           font-weight: normal;
+        }
+
+        &--footer {
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &--footer {
+        flex-direction: column;
+        margin-bottom: 0;
+        margin-right: 40px;
+
+        @media screen and(max-width: 991px) {
+          flex-direction: column;
+          margin-right: 0;
+          margin-top: 30px;
         }
       }
 
@@ -270,6 +300,10 @@ a {
     &--footer {
       padding: 0;
       margin-top: 0;
+
+      @media screen and(max-width: 991px) {
+        flex-direction: column;
+      }
     }
 
     @media screen and(max-width: 991px) {
@@ -813,6 +847,38 @@ a {
 //footer
 
 .mt-footer {
-  padding: 42px 0;
+  padding: 42px 0 0;
   background-color: $secondary-color;
+
+  &-contact {
+    &-social {
+      &__icon {
+        width: 36px;
+        height: 36px;
+        fill: $success;
+        transition: 0.3s;
+
+        &:hover {
+          fill: #9cabac;
+        }
+      }
+      &__link {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      @media screen and(max-width: 991px) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &-copyright {
+    margin-top: 45px;
+    padding: 10px 0 14px;
+    background-color: #2c3e50;
+    color: $success;
+    text-align: center;
+  }
 }

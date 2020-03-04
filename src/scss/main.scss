@@ -1,9 +1,3 @@
-// @font-face {
-//   font-family: "Roboto";
-//   src: url("../fonts/Roboto-Regular.ttf");
-//   font-weight: 400;
-//   font-style: normal;
-// }
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap");
 @import "./variables.scss";
 
@@ -250,7 +244,7 @@ a {
     &-menu {
       width: 100%;
       max-width: 1050px;
-      margin: 0 auto;
+      margin: 0auto;
 
       &__item {
         &::after {
@@ -457,7 +451,7 @@ a {
           content: "";
           position: $absolute;
           width: 90%;
-          margin: 0 auto;
+          margin: 0auto;
           height: 1px;
           background-color: $success;
           left: 10px;
@@ -727,7 +721,7 @@ a {
 
       &-card {
         max-width: 263px;
-        margin: 0 auto;
+        margin: 0auto;
 
         &__icon {
           height: 50px;
@@ -854,7 +848,7 @@ a {
 
     &-card {
       max-width: 263px;
-      margin: 0 auto;
+      margin: 0auto;
 
       &-date {
         margin-bottom: 17px;

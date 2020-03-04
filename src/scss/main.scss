@@ -456,6 +456,21 @@ a {
 
   .mt-top {
     padding: 83px 0 81px;
+    text-align: right;
+
+    &__link {
+      font-size: 1.25rem;
+      color: #9cabac;
+      border-bottom: 2px dashed #9cabac;
+      font-weight: bold;
+      margin-top: 55px;
+
+      &:hover {
+        text-decoration: none;
+        color: $secondary-color;
+        border-color: $secondary-color;
+      }
+    }
 
     &-toggle {
       &-wrapp {
@@ -584,11 +599,10 @@ a {
 
     &-slide {
       margin-top: 80px;
-      display: flex;
-      justify-content: space-around;
 
       &-card {
-        margin-right: 30px;
+        max-width: 263px;
+        margin: 0 auto;
 
         &__icon {
           height: 50px;
@@ -597,7 +611,7 @@ a {
 
           &--stock {
             left: -19px;
-            top: 255px;
+            top: 230px;
             width: 144px;
             height: 33px;
           }
@@ -611,7 +625,7 @@ a {
         &::before {
           content: url("../img/cool.png");
           position: absolute;
-          top: 261px;
+          top: 236px;
           z-index: 2;
           left: 6px;
         }
@@ -620,7 +634,7 @@ a {
           &::before {
             content: url("../img/across.png");
             position: absolute;
-            top: 261px;
+            top: 236px;
             z-index: 2;
             left: 6px;
           }
@@ -638,12 +652,6 @@ a {
           &--throuth {
             text-decoration: line-through;
             color: #edeff0;
-          }
-        }
-
-        &__text {
-          &--marginBottom {
-            margin-bottom: 40px;
           }
         }
 
@@ -675,6 +683,10 @@ a {
           }
         }
       }
+    }
+
+    @media screen and(max-width: 991px) {
+      text-align: center;
     }
   }
 }

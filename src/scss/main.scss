@@ -1,10 +1,10 @@
 // @font-face {
 //   font-family: "Roboto";
-//   src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto.woff2") format("woff2"),
-//     url("../fonts/Roboto.woff") format("woff"), url("../fonts/Roboto.ttf") format("truetype");
+//   src: url("../fonts/Roboto-Regular.ttf");
 //   font-weight: 400;
 //   font-style: normal;
 // }
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap");
 @import "./variables.scss";
 
 * {
@@ -60,6 +60,10 @@ a {
           color: $secondary-color;
           font-weight: bold;
 
+          &:hover {
+            color: $success;
+          }
+
           &--footer {
             color: $primary;
             text-transform: lowercase;
@@ -107,11 +111,11 @@ a {
     &-input {
       &__item {
         max-width: 400px;
-        background-color: #ecf0f1;
+        background-color: $white-color;
         color: $secondary-color;
         padding: 11px 20px;
         border-radius: 8px;
-        cursor: pointer;
+        cursor: $pointer;
 
         &::placeholder {
           color: #c1c1c1;
@@ -130,9 +134,9 @@ a {
         height: 18px;
         top: 13px;
         right: 20px;
-        fill: #9cabac;
+        fill: $success-color;
         transition: 0.3s;
-        cursor: pointer;
+        cursor: $pointer;
 
         &:hover {
           fill: $secondary-color;
@@ -159,17 +163,17 @@ a {
       margin-bottom: 19px;
 
       &__link {
-        color: #9cabac;
+        color: $success-color;
         display: inline-block;
         margin-right: 20px;
 
         &--go {
           &::after {
             content: "";
-            position: absolute;
+            position: $absolute;
             width: 1px;
             height: 16px;
-            background-color: #9cabac;
+            background-color: $success-color;
             top: 5px;
             right: -11px;
           }
@@ -192,13 +196,13 @@ a {
       &__icon {
         width: 18px;
         height: 18px;
-        fill: #9cabac;
+        fill: $success-color;
         transition: 0.3s;
       }
     }
 
     &-card {
-      background-color: #ecf0f1;
+      background-color: $white-color;
       padding: 11px 20px;
       border-radius: 8px;
       width: 100%;
@@ -219,12 +223,12 @@ a {
       &-good {
         &__item {
           color: $success;
-          cursor: pointer;
+          cursor: $pointer;
         }
 
         &__value {
           font-weight: normal;
-          cursor: pointer;
+          cursor: $pointer;
           color: #405468;
         }
       }
@@ -241,7 +245,7 @@ a {
     margin-top: 30px;
     background-color: $secondary-color;
     padding: 25px 0;
-    text-transform: uppercase;
+    text-transform: $upper;
 
     &-menu {
       width: 100%;
@@ -250,7 +254,7 @@ a {
 
       &__item {
         &::after {
-          position: absolute;
+          position: $absolute;
           content: url("../img/mint.png");
           top: 5px;
           right: -14px;
@@ -336,7 +340,7 @@ a {
       &__title {
         font-size: 2.75rem;
         font-weight: bold;
-        text-transform: uppercase;
+        text-transform: $upper;
         color: $secondary-color;
 
         &--fontWeight {
@@ -399,7 +403,7 @@ a {
       }
 
       &__item {
-        background-color: #ecf0f1;
+        background-color: $white-color;
         color: $secondary-color;
         border: none;
         padding: 20px 0 22px 30px;
@@ -440,7 +444,7 @@ a {
 
         &::before {
           content: "";
-          position: absolute;
+          position: $absolute;
           width: 5px;
           height: 5px;
           background-color: $success;
@@ -451,7 +455,7 @@ a {
 
         &::after {
           content: "";
-          position: absolute;
+          position: $absolute;
           width: 90%;
           margin: 0 auto;
           height: 1px;
@@ -461,7 +465,7 @@ a {
         }
 
         &:first-child {
-          color: #ecf0f1;
+          color: $white-color;
           text-align: center;
           background-color: $success;
           font-size: 1.125rem;
@@ -469,17 +473,17 @@ a {
         }
 
         &:hover:not(:first-child) {
-          color: #ecf0f1;
+          color: $white-color;
           background-color: $secondary-color;
         }
 
         &--hover {
           background-color: $success;
-          color: #ecf0f1;
+          color: $white-color;
           padding: 23px 30px;
 
           &:first-child {
-            color: #ecf0f1;
+            color: $white-color;
             font-size: 1rem;
             font-weight: normal;
           }
@@ -491,14 +495,14 @@ a {
           }
 
           &::before {
-            background-color: #ecf0f1;
+            background-color: $white-color;
             top: 50%;
             left: 14px;
             transform: translateY(-50%);
           }
 
           &::after {
-            background-color: #ecf0f1;
+            background-color: $white-color;
           }
 
           &:hover {
@@ -514,7 +518,7 @@ a {
         z-index: 2;
 
         @media screen and(max-width: 991px) {
-          left: 5px;
+          left: 14px;
           top: 462px;
           max-width: 268px;
           z-index: 20;
@@ -542,13 +546,13 @@ a {
   // section advantages
   .mt-advantages {
     padding: 68px 0 73px;
-    background-color: #ecf0f1;
+    background-color: $white-color;
 
     &__title {
       font-size: 2.75rem;
       color: $secondary-color;
       text-align: center;
-      text-transform: uppercase;
+      text-transform: $upper;
 
       &--news {
         margin-bottom: 70px;
@@ -566,7 +570,7 @@ a {
 
       &__text {
         margin-top: 26px;
-        font-size: 1.25rem;
+        font-size: $fontSize;
         color: $secondary-color;
         border-radius: 7px;
       }
@@ -580,9 +584,9 @@ a {
     text-align: right;
 
     &__link {
-      font-size: 1.25rem;
-      color: #9cabac;
-      border-bottom: 2px dashed #9cabac;
+      font-size: $fontSize;
+      color: $success-color;
+      border-bottom: 2px dashed $success-color;
       font-weight: bold;
       margin-top: 55px;
 
@@ -597,12 +601,12 @@ a {
       &-wrapp {
         width: 41px;
         height: 41px;
-        background-color: #ecf0f1;
+        background-color: $white-color;
         border-radius: 7px;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        cursor: pointer;
+        cursor: $pointer;
         transition: 0.3s;
 
         &--right {
@@ -621,7 +625,7 @@ a {
           background-color: $secondary-color;
 
           .mt-top-toggle-wrapp__arrowLeft {
-            fill: #ecf0f1;
+            fill: $white-color;
           }
         }
       }
@@ -629,10 +633,10 @@ a {
       &__item {
         width: 100%;
         max-width: 263px;
-        background-color: #ecf0f1;
+        background-color: $white-color;
         color: $secondary-color;
-        text-transform: uppercase;
-        font-size: 1.25rem;
+        text-transform: $upper;
+        font-size: $fontSize;
         padding: 22px 0;
         margin-right: 20px;
         font-weight: bold;
@@ -641,7 +645,7 @@ a {
 
         &::after {
           content: "";
-          position: absolute;
+          position: $absolute;
           left: 50%;
           bottom: -18px;
           border: 10px solid transparent;
@@ -653,7 +657,7 @@ a {
 
         &:hover {
           background-color: $secondary-color;
-          color: #ecf0f1;
+          color: $white-color;
 
           &::after {
             opacity: 1;
@@ -662,11 +666,11 @@ a {
 
         &--first {
           &::before {
-            position: absolute;
+            position: $absolute;
             content: "";
             height: 2px;
             width: 125px;
-            background-color: #ecf0f1;
+            background-color: $white-color;
             left: -120px;
             top: 50%;
             transform: translateY(-50%);
@@ -687,11 +691,11 @@ a {
           margin-right: 0;
 
           &::before {
-            position: absolute;
+            position: $absolute;
             content: "";
             height: 2px;
             width: 125px;
-            background-color: #ecf0f1;
+            background-color: $white-color;
             right: -120px;
             top: 50%;
             transform: translateY(-50%);
@@ -745,7 +749,7 @@ a {
 
         &::before {
           content: url("../img/cool.png");
-          position: absolute;
+          position: $absolute;
           top: 236px;
           z-index: 2;
           left: 6px;
@@ -754,7 +758,7 @@ a {
         &--last {
           &::before {
             content: url("../img/across.png");
-            position: absolute;
+            position: $absolute;
             top: 236px;
             z-index: 2;
             left: 6px;
@@ -768,7 +772,7 @@ a {
 
         &__price {
           color: $success;
-          font-size: 1.25rem;
+          font-size: $fontSize;
 
           &--throuth {
             text-decoration: line-through;
@@ -789,10 +793,10 @@ a {
 
           &--buy {
             background-color: transparent;
-            color: #9cabac;
+            color: $success-color;
             padding: 0;
             border: none;
-            border-bottom: 1px dashed #9cabac;
+            border-bottom: 1px dashed $success-color;
             border-radius: 0;
 
             &:hover {
@@ -825,7 +829,7 @@ a {
       margin-top: 23px;
       border: 1px solid transparent;
       transition: 0.3s;
-      cursor: pointer;
+      cursor: $pointer;
 
       &__item {
         width: 14px;
@@ -870,7 +874,7 @@ a {
         color: $secondary-color;
 
         &__title {
-          font-size: 1.25rem;
+          font-size: $fontSize;
           font-weight: normal;
           line-height: 1.3;
           margin-top: 15px;
@@ -919,7 +923,7 @@ a {
         transition: 0.3s;
 
         &:hover {
-          fill: #9cabac;
+          fill: $success-color;
         }
       }
       &__link {

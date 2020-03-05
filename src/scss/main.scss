@@ -244,7 +244,7 @@ a {
     &-menu {
       width: 100%;
       max-width: 1050px;
-      margin: 0auto;
+      margin: 0 auto;
 
       &__item {
         &::after {
@@ -261,7 +261,6 @@ a {
         &:last-child {
           &::after {
             content: "";
-
             @media screen and(max-width: 991px) {
               content: url("../img/mint.png");
             }
@@ -721,7 +720,7 @@ a {
 
       &-card {
         max-width: 263px;
-        margin: 0auto;
+        margin: 0 auto;
 
         &__icon {
           height: 50px;
@@ -848,7 +847,7 @@ a {
 
     &-card {
       max-width: 263px;
-      margin: 0auto;
+      margin: 0 auto;
 
       &-date {
         margin-bottom: 17px;
